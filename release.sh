@@ -56,7 +56,7 @@ then
 	exit 1
 fi
 
-versionFile="./sources/SegmentAmplitude/Version.swift"
+versionFile="./sources/SegmentFirebase/Version.swift"
 
 # get last line in version.swift
 versionLine=$(tail -n 1 $versionFile)
