@@ -195,7 +195,7 @@ private extension FirebaseDestination {
                                "Product Added": FirebaseAnalytics.AnalyticsEventAddToCart,
                                "Product Removed": FirebaseAnalytics.AnalyticsEventRemoveFromCart,
                                "Checkout Started": FirebaseAnalytics.AnalyticsEventBeginCheckout,
-                               "Promotion Viewed": FirebaseAnalytics.AnalyticsEventPresentOffer,
+                               "Promotion Viewed": FirebaseAnalytics.AnalyticsEventViewPromotion,
                                "Payment Info Entered": FirebaseAnalytics.AnalyticsEventAddPaymentInfo,
                                "Order Completed": FirebaseAnalytics.AnalyticsEventPurchase,
                                "Order Refunded": FirebaseAnalytics.AnalyticsEventRefund,
