@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/segmentio/analytics-swift.git",
         "state": {
           "branch": null,
-          "revision": "8ae3136bffaa139a690e7841bf63143605041540",
-          "version": "1.3.0"
+          "revision": "76316a5009502de6e7c2788c295e9afc68793cd3",
+          "version": "1.1.2"
         }
       },
       {
@@ -33,8 +33,8 @@
         "repositoryURL": "https://github.com/firebase/firebase-ios-sdk",
         "state": {
           "branch": null,
-          "revision": "2eb177effe7baf1f13ad0c5f4eb8c71a98429fb5",
-          "version": "9.1.0"
+          "revision": "e8828e8efc813817b3c2cbfde8e965f7a7a26641",
+          "version": "9.2.0"
         }
       },
       {
