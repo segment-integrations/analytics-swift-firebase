@@ -35,6 +35,10 @@ import FirebaseAnalytics
 /**
  An implmentation of the Firebase Analytics device mode destination as a plugin.
  */
+@objc(SEGFirebaseDestination)
+public class ObjCSegmentFirebase: NSObject, ObjCDestination, ObjCDestinationShim {
+    public func instance() -> DestinationPlugin { return FirebaseDestination() }
+}
 
 public class FirebaseDestination: DestinationPlugin {
     public let timeline = Timeline()
