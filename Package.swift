@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "SegmentFirebase",
     platforms: [
-        //.macOS("10.15"),
+        .macOS("10.15"),
         .iOS("13.0"),
         .tvOS("11.0"),
         .watchOS("7.1")
@@ -28,7 +28,7 @@ let package = Package(
 		.package(
 			name: "Firebase",
 			url: "https://github.com/firebase/firebase-ios-sdk",
-			from: "10.0.0"
+			from: "10.13.0"
 		)
     ],
     targets: [
