@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/segmentio/analytics-swift",
         "state": {
           "branch": null,
-          "revision": "af7f1d2fe6e48b1760538739f13f44ba71c1a61c",
-          "version": "1.3.4"
+          "revision": "c8fd5fdf59299f00b3e4303a1b12a6d88893bf56",
+          "version": "1.4.7"
         }
       },
       {
@@ -114,8 +114,8 @@
         "repositoryURL": "https://github.com/segmentio/Sovran-Swift.git",
         "state": {
           "branch": null,
-          "revision": "944c17d7c46bd95fc37f09136cabd172be5b413b",
-          "version": "1.0.3"
+          "revision": "64f3b5150c282a34af4578188dce2fd597e600e3",
+          "version": "1.1.0"
         }
       },
       {
