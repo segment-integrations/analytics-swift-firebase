@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "SegmentFirebase",
     platforms: [
-        //.macOS("10.15"),
+        .macOS("10.15"),
         .iOS("13.0"),
         .tvOS("11.0"),
         .watchOS("7.1")
