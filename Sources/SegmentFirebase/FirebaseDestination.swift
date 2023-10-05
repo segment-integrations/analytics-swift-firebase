@@ -46,9 +46,13 @@ public class FirebaseDestination: DestinationPlugin {
     public let type = PluginType.destination
     public let key = "Firebase"
     public var analytics: Segment.Analytics? = nil
-    
-    public init() { }
-    
+
+    private var firebaseOptions: FirebaseOptions? = nil
+
+    public init(firebaseOptions: FirebaseOptions? = nil) {
+        self.firebaseOptions = firebaseOptions
+    }
+
     public func update(settings: Settings, type: UpdateType) {
         // we've already set up this singleton SDK, can't do it again, so skip.
         guard type == .initial else { return }
@@ -63,7 +67,11 @@ public class FirebaseDestination: DestinationPlugin {
         if (FirebaseApp.app() != nil) {
             analytics?.log(message: "Firebase already configured, skipping")
         } else {
-            FirebaseApp.configure()
+            if let options = firebaseOptions {
+                FirebaseApp.configure(options: options)
+            } else {
+                FirebaseApp.configure()
+            }
         }
     }
     
