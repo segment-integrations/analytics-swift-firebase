@@ -26,7 +26,7 @@ Open your Package.swift file and add the following do your the `dependencies` se
 ```
 
 
-*Note the AppsFlyer library itself will be installed as an additional dependency.*
+*Note the Firebase library itself will be installed as an additional dependency.*
 
 
 ## Using the Plugin in your App
