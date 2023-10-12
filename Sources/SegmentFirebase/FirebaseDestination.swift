@@ -100,9 +100,14 @@ public class FirebaseDestination: DestinationPlugin {
         let name = formatFirebaseEventNames(event.event)
         var parameters: [String: Any]? = nil
         if let properties = event.properties?.dictionaryValue {
-            parameters = returnMappedFirebaseParameters(properties)
+            parameters = returnMappedFirebaseParameters(properties, for: FirebaseDestination.mappedKeys)
         }
-        
+
+        if let campaign = event.context?.dictionaryValue?["campaign"] as? [String: Any] {
+            let campaignParameters = returnMappedFirebaseParameters(campaign, for: FirebaseDestination.campaignMappedKeys)
+            parameters = (parameters ?? [:]).merging(campaignParameters) { (current, _) in current }
+        }
+
         FirebaseAnalytics.Analytics.logEvent(name, parameters: parameters)
         analytics?.log(message: "Firebase logEventWithName \(name) parameters \(String(describing: parameters))")
         return event
@@ -149,24 +154,24 @@ extension FirebaseDestination {
             throw(error)
         }
     }
-    
-    func returnMappedFirebaseParameters(_ properties: [String: Any]) -> [String: Any] {
-        
-        
+
+    func returnMappedFirebaseParameters(_ properties: [String: Any], for keys: [String: String]) -> [String: Any] {
+
+
         var mappedValues = properties
-        
-        for (key, firebaseKey) in FirebaseDestination.mappedKeys {
+
+        for (key, firebaseKey) in keys {
             if var data = properties[key] {
                 
                 mappedValues.removeValue(forKey: key)
                 
                 if let castData = data as? [String: Any] {
-                    data = returnMappedFirebaseParameters(castData)
+                    data = returnMappedFirebaseParameters(castData, for: keys)
                 } else if let castArray = data as? [Any] {
                     var updatedArray = [Any]()
                     for item in castArray {
                         if let castDictionary = item as? [String: Any] {
-                            updatedArray.append(returnMappedFirebaseParameters(castDictionary))
+                            updatedArray.append(returnMappedFirebaseParameters(castDictionary, for: keys))
                         } else {
                             updatedArray.append(item)
                         }
@@ -233,6 +238,11 @@ private extension FirebaseDestination {
                              "order_id": FirebaseAnalytics.AnalyticsParameterTransactionID,
                              "currency": FirebaseAnalytics.AnalyticsParameterCurrency]
     
+    static let campaignMappedKeys = ["source": FirebaseAnalytics.AnalyticsParameterSource,
+                                     "medium": FirebaseAnalytics.AnalyticsParameterMedium,
+                                     "name": FirebaseAnalytics.AnalyticsParameterCampaign,
+                                     "term": FirebaseAnalytics.AnalyticsParameterTerm,
+                                     "content": FirebaseAnalytics.AnalyticsParameterContent]
 }
 
 
