@@ -238,11 +238,11 @@ private extension FirebaseDestination {
                              "order_id": FirebaseAnalytics.AnalyticsParameterTransactionID,
                              "currency": FirebaseAnalytics.AnalyticsParameterCurrency]
     
-    static let campaignMappedKeys = ["source": "utm_source",
-                                     "medium": "utm_medium",
-                                     "name": "utm_campaign",
-                                     "term": "utm_term",
-                                     "content": "utm_content"]
+    static let campaignMappedKeys = ["source": FirebaseAnalytics.AnalyticsParameterSource,
+                                     "medium": FirebaseAnalytics.AnalyticsParameterMedium,
+                                     "name": FirebaseAnalytics.AnalyticsParameterCampaign,
+                                     "term": FirebaseAnalytics.AnalyticsParameterTerm,
+                                     "content": FirebaseAnalytics.AnalyticsParameterContent]
 }
 
 
