@@ -116,11 +116,17 @@ public class FirebaseDestination: DestinationPlugin {
     public func screen(event: ScreenEvent) -> ScreenEvent? {
         
         if let eventName = event.name {
+            var parameters: [String: Any] = [FirebaseAnalytics.AnalyticsParameterScreenName: eventName]
+            
+            if let campaign = event.context?.dictionaryValue?["campaign"] as? [String: Any] {
+                let campaignParameters = returnMappedFirebaseParameters(campaign, for: FirebaseDestination.campaignMappedKeys)
+                parameters = parameters.merging(campaignParameters) { (current, _) in current }
+            }
+            
             FirebaseAnalytics.Analytics.logEvent(FirebaseAnalytics.AnalyticsEventScreenView,
-                                                 parameters: [FirebaseAnalytics.AnalyticsParameterScreenName: eventName])
+                                                 parameters: parameters)
             analytics?.log(message: "Firebase setScreenName \(eventName)")
         }
-
 
         return event
     }
