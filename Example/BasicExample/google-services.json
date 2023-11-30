@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "351663513753",
+    "project_id": "engage-ccf9a",
+    "storage_bucket": "engage-ccf9a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:351663513753:android:64b23a13c334065f2a5808",
+        "android_client_info": {
+          "package_name": "com.analyticsreactnativepluginengageexample"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdkntjBgxRpR68OqFsY220kiFmkFDRCnk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
