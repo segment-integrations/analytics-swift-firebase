@@ -119,7 +119,8 @@ public class FirebaseDestination: DestinationPlugin {
             var parameters: [String: Any] = [FirebaseAnalytics.AnalyticsParameterScreenName: eventName]
             
             if let properties = event.properties?.dictionaryValue {
-                parameters = returnMappedFirebaseParameters(properties, for: FirebaseDestination.mappedKeys)
+                let propertiesParameters = returnMappedFirebaseParameters(properties, for: FirebaseDestination.mappedKeys)
+                parameters = parameters.merging(propertiesParameters) { (current, _) in current }
             }
 
             if let campaign = event.context?.dictionaryValue?["campaign"] as? [String: Any] {
