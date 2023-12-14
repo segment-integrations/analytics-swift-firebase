@@ -219,7 +219,7 @@ private struct FirebaseSettings: Codable {
 
 private extension FirebaseDestination {
     
-    static let mappedValues = ["Product Clicked": FirebaseAnalytics.AnalyticsEventSelectContent,
+    static let mappedValues = ["Product Clicked": FirebaseAnalytics.AnalyticsEventSelectItem,
                                "Product Viewed": FirebaseAnalytics.AnalyticsEventViewItem,
                                "Product Added": FirebaseAnalytics.AnalyticsEventAddToCart,
                                "Product Removed": FirebaseAnalytics.AnalyticsEventRemoveFromCart,
