@@ -201,13 +201,15 @@ extension FirebaseDestination {
     }
     
     // Makes sure all traits are string based for Firebase API
-    func mapToStrings(_ mapDictionary: [String: Any], finalize: (String, String) -> Void) {
+    func mapToStrings(_ mapDictionary: [String: Any?], finalize: (String, String) -> Void) {
         
         for (key, data) in mapDictionary {
-            var dataString = data as? String ?? "\(data)"
-            let keyString = key.replacingOccurrences(of: " ", with: "_")
-            dataString = dataString.trimmingCharacters(in: .whitespacesAndNewlines)
-            finalize(keyString, dataString)
+            if let d = data {
+                var dataString = d as? String ?? "\(d)"
+                let keyString = key.replacingOccurrences(of: " ", with: "_")
+                dataString = dataString.trimmingCharacters(in: .whitespacesAndNewlines)
+                finalize(keyString, dataString)
+            }
         }
     }
 }
