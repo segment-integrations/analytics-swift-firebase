@@ -204,6 +204,10 @@ extension FirebaseDestination {
     func mapToStrings(_ mapDictionary: [String: Any?], finalize: (String, String) -> Void) {
         
         for (key, data) in mapDictionary {
+
+            // Since dictionary values can be Optional we have to unwrap them
+            // before encoding so that we don't encode them as "Optional(*)"
+            // Note: nil values are NOT encoded.
             if let d = data {
                 var dataString = d as? String ?? "\(d)"
                 let keyString = key.replacingOccurrences(of: " ", with: "_")
