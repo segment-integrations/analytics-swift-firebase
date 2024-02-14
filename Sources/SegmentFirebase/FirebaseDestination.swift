@@ -37,11 +37,11 @@ import FirebaseAnalytics
  */
 
 @objc(SEGFirebaseDestination)
- public class ObjCFirebaseDestination: NSObject, ObjCPlugin, ObjCPluginShim {
-     public func instance() -> EventPlugin { return FirebaseDestination() }
- }
+open class ObjCFirebaseDestination: NSObject, ObjCPlugin, ObjCPluginShim {
+    public func instance() -> EventPlugin { return FirebaseDestination() }
+}
 
-public class FirebaseDestination: DestinationPlugin {
+open class FirebaseDestination: DestinationPlugin {
     public let timeline = Timeline()
     public let type = PluginType.destination
     public let key = "Firebase"
@@ -52,8 +52,8 @@ public class FirebaseDestination: DestinationPlugin {
     public init(firebaseOptions: FirebaseOptions? = nil) {
         self.firebaseOptions = firebaseOptions
     }
-
-    public func update(settings: Settings, type: UpdateType) {
+    
+    open func update(settings: Settings, type: UpdateType) {
         // we've already set up this singleton SDK, can't do it again, so skip.
         guard type == .initial else { return }
         
