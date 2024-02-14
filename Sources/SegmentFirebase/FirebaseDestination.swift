@@ -37,11 +37,11 @@ import FirebaseAnalytics
  */
 
 @objc(SEGFirebaseDestination)
- public class ObjCFirebaseDestination: NSObject, ObjCPlugin, ObjCPluginShim {
-     public func instance() -> EventPlugin { return FirebaseDestination() }
- }
+open class ObjCFirebaseDestination: NSObject, ObjCPlugin, ObjCPluginShim {
+    public func instance() -> EventPlugin { return FirebaseDestination() }
+}
 
-public class FirebaseDestination: DestinationPlugin {
+open class FirebaseDestination: DestinationPlugin {
     public let timeline = Timeline()
     public let type = PluginType.destination
     public let key = "Firebase"
