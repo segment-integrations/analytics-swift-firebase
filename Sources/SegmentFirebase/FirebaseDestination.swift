@@ -52,8 +52,8 @@ open class FirebaseDestination: DestinationPlugin {
     public init(firebaseOptions: FirebaseOptions? = nil) {
         self.firebaseOptions = firebaseOptions
     }
-
-    public func update(settings: Settings, type: UpdateType) {
+    
+    open func update(settings: Settings, type: UpdateType) {
         // we've already set up this singleton SDK, can't do it again, so skip.
         guard type == .initial else { return }
         
