@@ -2,6 +2,10 @@
 
 Add Firebase device mode support to your applications via this plugin for [Analytics-Swift](https://github.com/segmentio/analytics-swift)
 
+⚠️ **Github Issues disabled in this repository** ⚠️
+
+Please direct all issues, bug reports, and feature enhancements to `friends@segment.com` so they can be resolved as efficiently as possible. 
+
 ## Adding the dependency
 
 ***Note:** the Firebase library itself will be installed as an additional dependency.*
