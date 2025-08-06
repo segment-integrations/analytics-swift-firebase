@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/google/abseil-cpp-binary.git",
         "state": {
           "branch": null,
-          "revision": "194a6706acbd25e4ef639bcaddea16e8758a3e27",
-          "version": "1.2024011602.0"
+          "revision": "bbe8b69694d7873315fd3a4ad41efe043e1c07c5",
+          "version": "1.2024072200.0"
         }
       },
       {
@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/segmentio/analytics-swift.git",
         "state": {
           "branch": null,
-          "revision": "c8fd5fdf59299f00b3e4303a1b12a6d88893bf56",
-          "version": "1.4.7"
+          "revision": "5d3a762da5412d324205a58358b95e1da334c21e",
+          "version": "1.8.0"
         }
       },
       {
@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/google/app-check.git",
         "state": {
           "branch": null,
-          "revision": "21fe1af9be463a359aaf8d96789ef73fc3760d09",
-          "version": "11.0.1"
+          "revision": "61b85103a1aeed8218f17c794687781505fbbef5",
+          "version": "11.2.0"
         }
       },
       {
@@ -33,8 +33,17 @@
         "repositoryURL": "https://github.com/firebase/firebase-ios-sdk",
         "state": {
           "branch": null,
-          "revision": "9118aca998dbe2ceac45d64b21a91c6376928df7",
-          "version": "11.1.0"
+          "revision": "b9bf3adac18e6e3059167194aeb632f15a5ba4b2",
+          "version": "12.1.0"
+        }
+      },
+      {
+        "package": "GoogleAdsOnDeviceConversion",
+        "repositoryURL": "https://github.com/googleads/google-ads-on-device-conversion-ios-sdk",
+        "state": {
+          "branch": null,
+          "revision": "e15f979c3eaf477d24e5bfec9d87f1d76fbac297",
+          "version": "2.2.0"
         }
       },
       {
@@ -42,8 +51,8 @@
         "repositoryURL": "https://github.com/google/GoogleAppMeasurement.git",
         "state": {
           "branch": null,
-          "revision": "07a2f57d147d2bf368a0d2dcb5579ff082d9e44f",
-          "version": "11.1.0"
+          "revision": "883305109ead4599e4ca59591754ee72e81e6b5e",
+          "version": "12.1.0"
         }
       },
       {
@@ -60,8 +69,8 @@
         "repositoryURL": "https://github.com/google/GoogleUtilities.git",
         "state": {
           "branch": null,
-          "revision": "53156c7ec267db846e6b64c9f4c4e31ba4cf75eb",
-          "version": "8.0.2"
+          "revision": "60da361632d0de02786f709bdc0c4df340f7613e",
+          "version": "8.1.0"
         }
       },
       {
@@ -69,8 +78,8 @@
         "repositoryURL": "https://github.com/google/grpc-binary.git",
         "state": {
           "branch": null,
-          "revision": "f56d8fc3162de9a498377c7b6cea43431f4f5083",
-          "version": "1.65.1"
+          "revision": "cc0001a0cf963aa40501d9c2b181e7fc9fd8ec71",
+          "version": "1.69.0"
         }
       },
       {
@@ -78,8 +87,8 @@
         "repositoryURL": "https://github.com/google/gtm-session-fetcher.git",
         "state": {
           "branch": null,
-          "revision": "a2ab612cb980066ee56d90d60d8462992c07f24b",
-          "version": "3.5.0"
+          "revision": "fb7f2740b1570d2f7599c6bb9531bf4fad6974b7",
+          "version": "5.0.0"
         }
       },
       {
@@ -87,8 +96,17 @@
         "repositoryURL": "https://github.com/google/interop-ios-for-google-sdks.git",
         "state": {
           "branch": null,
-          "revision": "2d12673670417654f08f5f90fdd62926dc3a2648",
-          "version": "100.0.0"
+          "revision": "040d087ac2267d2ddd4cca36c757d1c6a05fdbfe",
+          "version": "101.0.0"
+        }
+      },
+      {
+        "package": "JSONSafeEncoding",
+        "repositoryURL": "https://github.com/segmentio/jsonsafeencoding-swift.git",
+        "state": {
+          "branch": null,
+          "revision": "af6a8b360984085e36c6341b21ecb35c12f47ebd",
+          "version": "2.0.0"
         }
       },
       {
@@ -96,8 +114,8 @@
         "repositoryURL": "https://github.com/firebase/leveldb.git",
         "state": {
           "branch": null,
-          "revision": "0706abcc6b0bd9cedfbb015ba840e4a780b5159b",
-          "version": "1.22.2"
+          "revision": "a0bc79961d7be727d258d33d5a6b2f1023270ba1",
+          "version": "1.22.5"
         }
       },
       {
@@ -120,11 +138,11 @@
       },
       {
         "package": "Sovran",
-        "repositoryURL": "https://github.com/segmentio/Sovran-Swift.git",
+        "repositoryURL": "https://github.com/segmentio/sovran-swift.git",
         "state": {
           "branch": null,
-          "revision": "64f3b5150c282a34af4578188dce2fd597e600e3",
-          "version": "1.1.0"
+          "revision": "24867f3e4ac62027db9827112135e6531b6f4051",
+          "version": "1.1.2"
         }
       },
       {
@@ -132,8 +150,8 @@
         "repositoryURL": "https://github.com/apple/swift-protobuf.git",
         "state": {
           "branch": null,
-          "revision": "e1499bc69b9040b29184f7f2996f7bab467c1639",
-          "version": "1.19.0"
+          "revision": "102a647b573f60f73afdce5613a51d71349fe507",
+          "version": "1.30.0"
         }
       }
     ]
