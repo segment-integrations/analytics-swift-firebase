@@ -57,12 +57,6 @@ open class FirebaseDestination: DestinationPlugin {
         // we've already set up this singleton SDK, can't do it again, so skip.
         guard type == .initial else { return }
         
-        guard let firebaseSettings: FirebaseSettings = settings.integrationSettings(forPlugin: self) else { return }
-        if let deepLinkURLScheme = firebaseSettings.deepLinkURLScheme {
-            FirebaseOptions.defaultOptions()?.deepLinkURLScheme = deepLinkURLScheme
-            analytics?.log(message: "Added deepLinkURLScheme: \(deepLinkURLScheme)")
-        }
-        
         // First check if firebase has been set up from a previous settings call
         if (FirebaseApp.app() != nil) {
             analytics?.log(message: "Firebase already configured, skipping")
