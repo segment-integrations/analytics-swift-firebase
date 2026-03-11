@@ -59,7 +59,6 @@ open class FirebaseDestination: DestinationPlugin {
         
         guard let firebaseSettings: FirebaseSettings = settings.integrationSettings(forPlugin: self) else { return }
         if let deepLinkURLScheme = firebaseSettings.deepLinkURLScheme {
-            FirebaseOptions.defaultOptions()?.deepLinkURLScheme = deepLinkURLScheme
             analytics?.log(message: "Added deepLinkURLScheme: \(deepLinkURLScheme)")
         }
         
