@@ -57,6 +57,8 @@ open class FirebaseDestination: DestinationPlugin {
         // we've already set up this singleton SDK, can't do it again, so skip.
         guard type == .initial else { return }
         
+        guard settings.hasIntegrationSettings(forPlugin: self) else { return }
+
         // First check if firebase has been set up from a previous settings call
         if (FirebaseApp.app() != nil) {
             analytics?.log(message: "Firebase already configured, skipping")
@@ -211,8 +213,6 @@ extension FirebaseDestination {
         }
     }
 }
-
-
 private extension FirebaseDestination {
     
     static let mappedValues = ["Product Clicked": FirebaseAnalytics.AnalyticsEventSelectItem,
